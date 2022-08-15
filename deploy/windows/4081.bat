@@ -7,7 +7,7 @@ c:
 cd\
 
 :: here your path
-cd here\your\path
+cd C:\Users\jesus\projects\wpp-calendar-node
 
 @npm start
 goto End

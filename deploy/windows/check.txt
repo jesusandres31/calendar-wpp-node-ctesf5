@@ -1,0 +1,4 @@
+netstat -ano | find "4081"
+
+taskkill /PID <PID> /F
+
