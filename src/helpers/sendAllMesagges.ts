@@ -17,7 +17,8 @@ export const sendAllMesagges = async (
       const name = formatName(playerFullName);
       const time = formatTime(startDate);
       const number = contacts.find(
-        (contact) => contact.name === playerFullName
+        (contact) =>
+          contact.name?.toLowerCase() === playerFullName.toLowerCase()
       )?.number;
 
       if (number) {
