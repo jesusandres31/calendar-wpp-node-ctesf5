@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from "express";
-import { whatsAppSvcs } from "../services";
+import { NextFunction, Request, Response } from 'express';
+import { whatsAppSvcs } from '../services';
 
 class WhatsAppCtrl {
   /**
@@ -9,7 +9,7 @@ class WhatsAppCtrl {
   public getWhatsAppContacts = async (
     req: Request,
     res: Response,
-    next: NextFunction
+    next: NextFunction,
   ): Promise<Response | void> => {
     try {
       const payload = await whatsAppSvcs.getWhatsAppContacts();
@@ -26,14 +26,14 @@ class WhatsAppCtrl {
   public sendWhatsAppMessage = async (
     req: Request,
     res: Response,
-    next: NextFunction
+    next: NextFunction,
   ): Promise<Response | void> => {
     const { name, number, time } = req.body;
     try {
       const payload = await whatsAppSvcs.sendWhatsAppMessage(
         name,
         number,
-        time
+        time,
       );
       return res.status(200).json(payload);
     } catch (e) {

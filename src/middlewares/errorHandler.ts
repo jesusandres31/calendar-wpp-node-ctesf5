@@ -1,4 +1,4 @@
-import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
+import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
 
 /**
  * Global error handler.
@@ -7,7 +7,7 @@ export const errorHandler: ErrorRequestHandler = (
   err: IHttpError,
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   // get code
   const { code: errorCode, message, hint, status } = err || {};

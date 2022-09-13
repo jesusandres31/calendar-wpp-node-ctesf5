@@ -1,6 +1,6 @@
-import { createMessage } from "../utils";
-import WAWebJS from "whatsapp-web.js";
-import { client } from "../libs";
+import { createMessage } from '../utils';
+import WAWebJS from 'whatsapp-web.js';
+import { client } from '../libs';
 
 class WhatsappSvcs {
   /**
@@ -19,7 +19,7 @@ class WhatsappSvcs {
   public sendWhatsAppMessage = async (
     name: string,
     number: string,
-    time: string
+    time: string,
   ): Promise<WAWebJS.Message> => {
     const message = createMessage(name, time);
     const payload = await client.sendMessage(number, message);

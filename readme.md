@@ -1,5 +1,11 @@
 # Corrientes F5 Calendar-WhatsApp bot
 
+## Private files to upload before running:
+
+- `.env`
+
+- `private/calendar.json`
+
 ### Run locally:
 
 - npm i
@@ -12,12 +18,6 @@
 - docker run -dp 4000:4000 ctes_f5
 
 - docker logs ctes_f5
-
-## Private files to upload:
-
-- `.env`
-
-- `private/calendar.json`
 
 ## Deploy:
 

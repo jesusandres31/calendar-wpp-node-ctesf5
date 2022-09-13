@@ -1,5 +1,3 @@
-interface IContact {
-  name: string | undefined;
-  number: string;
-  server: string;
-}
+import { IContact } from './Contact';
+
+export { IContact };

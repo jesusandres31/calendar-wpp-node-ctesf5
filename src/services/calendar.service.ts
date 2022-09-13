@@ -1,8 +1,8 @@
-import { getStartOfDay, getEndOfDay } from "../utils";
-import { getCalendarId } from "../helpers";
-import { calendar } from "../libs";
-import { Calendar } from "../types";
-import { calendar_v3 } from "googleapis";
+import { getStartOfDay, getEndOfDay } from '../utils';
+import { getCalendarId } from '../helpers';
+import { calendar } from '../libs';
+import { Calendar } from '../types';
+import { calendar_v3 } from 'googleapis';
 
 class CalendarSvcs {
   /**
@@ -10,7 +10,7 @@ class CalendarSvcs {
    * @method get
    */
   public getCalendar = async (
-    calendarId: string
+    calendarId: string,
   ): Promise<calendar_v3.Schema$Events> => {
     const payload = await calendar.calendars.get({
       calendarId: getCalendarId(calendarId as Calendar),
@@ -23,14 +23,14 @@ class CalendarSvcs {
    * @method get
    */
   public getEvents = async (
-    calendarId: string
+    calendarId: string,
   ): Promise<calendar_v3.Schema$Events> => {
     const payload = await calendar.events.list({
       calendarId: getCalendarId(calendarId as Calendar),
       timeMin: getStartOfDay(),
       timeMax: getEndOfDay(),
       singleEvents: true,
-      orderBy: "startTime",
+      orderBy: 'startTime',
     });
     return payload.data;
   };
@@ -40,14 +40,14 @@ class CalendarSvcs {
    * @method get
    */
   public getEventsCalendarById = async (
-    calendarId: string
+    calendarId: string,
   ): Promise<calendar_v3.Schema$Event[] | undefined> => {
     const payload = await calendar.events.list({
       calendarId,
       timeMin: getStartOfDay(),
       timeMax: getEndOfDay(),
       singleEvents: true,
-      orderBy: "startTime",
+      orderBy: 'startTime',
     });
     return payload.data.items;
   };

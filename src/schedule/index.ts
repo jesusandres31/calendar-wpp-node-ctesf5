@@ -1,10 +1,10 @@
-import cron from "node-cron";
+import cron from 'node-cron';
 import {
   getAllContacts,
   getAllEventsOfTheDay,
   sendAllMesagges,
-} from "../helpers";
-import { CRON_EXPRESSION, TIME_ZONE as timezone } from "../constants";
+} from '../helpers';
+import { CRON_EXPRESSION, TIME_ZONE as timezone } from '../constants';
 
 /**
  * cron job
@@ -27,7 +27,7 @@ const setupScheduler = async () => {
         console.log(e);
       }
     },
-    { timezone }
+    { timezone },
   );
 };
 

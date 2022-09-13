@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { calendarCtrl } from "../controllers";
+import { Router } from 'express';
+import { calendarCtrl } from '../controllers';
 
 const router = Router();
 
@@ -7,12 +7,12 @@ const router = Router();
  * Get calendar.
  * @method get
  */
-router.route("/calendar/:calendarId").get(calendarCtrl.getCalendar);
+router.route('/calendar/:calendarId').get(calendarCtrl.getCalendar);
 
 /**
  * Get events.
  * @method get
  */
-router.route("/events/:calendarId").get(calendarCtrl.getEvents);
+router.route('/events/:calendarId').get(calendarCtrl.getEvents);
 
 export default router;

@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { whatsAppCtrl } from "../controllers";
+import { Router } from 'express';
+import { whatsAppCtrl } from '../controllers';
 
 const router = Router();
 
@@ -7,12 +7,12 @@ const router = Router();
  * Get whatsapp contacts.
  * @method get
  */
-router.route("/contacts").get(whatsAppCtrl.getWhatsAppContacts);
+router.route('/contacts').get(whatsAppCtrl.getWhatsAppContacts);
 
 /**
  * Send message.
  * @method post
  */
-router.route("/message").post(whatsAppCtrl.sendWhatsAppMessage);
+router.route('/message').post(whatsAppCtrl.sendWhatsAppMessage);
 
 export default router;

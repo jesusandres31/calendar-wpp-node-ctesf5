@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router } from 'express';
 import {
   getAllContacts,
   getAllEventsOfTheDay,
-  sendAllMesagges,
-} from "../helpers";
+  testSendAllMesagges,
+} from '../helpers';
 
 const router = Router();
 
@@ -11,7 +11,7 @@ const router = Router();
  * Get test script.
  * @method get
  */
-router.route("/test").get(async (req, res, next) => {
+router.route('/test').get(async (req, res, next) => {
   try {
     // 1) get contacts
     const contacts = await getAllContacts();
@@ -20,9 +20,9 @@ router.route("/test").get(async (req, res, next) => {
     const events = await getAllEventsOfTheDay();
 
     // 3) iterate events and send messages
-    const payload = await sendAllMesagges(contacts, events);
+    const payload = await testSendAllMesagges(contacts, events);
 
-    return res.status(200).json({ events, contacts, payload });
+    return res.status(200).json(payload);
   } catch (e) {
     return next(e);
   }
