@@ -20,9 +20,9 @@ router.route('/test').get(async (req, res, next) => {
     const events = await getAllEventsOfTheDay();
 
     // 3) iterate events and send messages
-    const payload = await testSendAllMesagges(contacts, events);
+    const sentMsgs = await testSendAllMesagges(contacts, events);
 
-    return res.status(200).json(payload);
+    return res.status(200).json(sentMsgs);
   } catch (e) {
     return next(e);
   }

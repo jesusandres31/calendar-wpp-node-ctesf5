@@ -3,6 +3,7 @@ import { getAllCalendars } from './getAllCalendars';
 import { sendAllMesagges, testSendAllMesagges } from './sendAllMesagges';
 import { getAllContacts } from './getAllContacts';
 import { getAllEventsOfTheDay } from './getAllEventsOfTheDay';
+import { notifyStatus } from './notifyStatus';
 
 export {
   getCalendarId,
@@ -11,4 +12,5 @@ export {
   testSendAllMesagges,
   getAllContacts,
   getAllEventsOfTheDay,
+  notifyStatus,
 };

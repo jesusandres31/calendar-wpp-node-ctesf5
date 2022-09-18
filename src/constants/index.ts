@@ -11,3 +11,8 @@ export const SERVER_GROUP: Server = 'g.us';
  */
 export const CRON_EXPRESSION = process.env.CRON_EXPRESSION || '';
 export const TIME_ZONE = 'America/Buenos_Aires';
+
+/**
+ * wpp notification group id
+ */
+export const NOTIF_GROUP_ID = process.env.NOTIF_GROUP_ID || '';

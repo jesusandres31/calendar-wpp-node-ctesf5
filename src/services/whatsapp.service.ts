@@ -17,11 +17,9 @@ class WhatsappSvcs {
    * @method get
    */
   public sendWhatsAppMessage = async (
-    name: string,
+    message: string,
     number: string,
-    time: string,
   ): Promise<WAWebJS.Message> => {
-    const message = createMessage(name, time);
     const payload = await client.sendMessage(number, message);
     return payload;
   };

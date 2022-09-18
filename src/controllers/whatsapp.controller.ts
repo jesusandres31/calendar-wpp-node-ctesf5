@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import { createMessage } from '../utils';
 import { whatsAppSvcs } from '../services';
 
 class WhatsAppCtrl {
@@ -30,11 +31,8 @@ class WhatsAppCtrl {
   ): Promise<Response | void> => {
     const { name, number, time } = req.body;
     try {
-      const payload = await whatsAppSvcs.sendWhatsAppMessage(
-        name,
-        number,
-        time,
-      );
+      const message = createMessage(name, time);
+      const payload = await whatsAppSvcs.sendWhatsAppMessage(message, number);
       return res.status(200).json(payload);
     } catch (e) {
       return next(e);
