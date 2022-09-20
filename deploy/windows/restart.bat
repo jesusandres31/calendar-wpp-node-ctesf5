@@ -14,6 +14,6 @@ cd deploy/windows
 :: here your script path 
 CScript "C:\Users\Usuario\NodeProjects\ctesf5-node-calendar\calendar-wpp-node-ctesf5\deploy\windows\4081.vbs"
 
-@Echo process successfully started...
+@Echo node process successfully started...
 
 pause
