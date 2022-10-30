@@ -61,7 +61,7 @@ private/
 session/
 .wwebjs_auth/
 
-# qe
+# qr
 static/qr-code.svg
 
 # logs
