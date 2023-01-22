@@ -13,15 +13,17 @@ export const notifyStatus = async (
   let message = 'Todos los turnos fueron notificados correctamente. ✔️';
 
   if (responses.length === 0 && notMatchingContacts.length === 0) {
-    message = 'no events today';
+    message = 'No hay eventos hoy. ✔️';
     return;
   }
 
+  // get names of not matching contacts
   let names = notMatchingContacts.join(', ');
 
   if (notMatchingContacts.length === 1) {
     message = `No se encontro el contacto ${names}. Y no se pudo notificar su turno. ❌`;
   }
+
   if (notMatchingContacts.length > 1) {
     message = `No se encontraron los contactos ${names}. Y no se pudo notificar sus turnos. ❌`;
   }
