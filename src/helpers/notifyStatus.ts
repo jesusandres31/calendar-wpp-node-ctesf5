@@ -13,7 +13,7 @@ export const notifyStatus = async (
   let message = 'Todos los turnos fueron notificados correctamente. ✔️';
 
   if (responses.length === 0 && notMatchingContacts.length === 0) {
-    message = 'No hay eventos hoy. ✔️';
+    // message = 'No hay eventos hoy. ✔️';
     return;
   }
 
